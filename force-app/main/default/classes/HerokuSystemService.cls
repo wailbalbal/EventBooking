@@ -12,7 +12,7 @@ public class HerokuSystemService {
             HerokuAttendeeRequestBody herokuAttendeeRequestBody = new HerokuAttendeeRequestBody(attendee.name, attendee.email);
             httpClient.post(herokuAttendeeRequestBody);
         }catch(Error error){
-            throw
+            throw new Exception(error.getMessage());
         }
     }
 
